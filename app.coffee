@@ -15,12 +15,12 @@ module.exports =
 		markdown: marked
 
 	extensions: [
-		js_pipeline(files: 'assets/js/*.coffee'),
-		css_pipeline(files: 'assets/css/*.styl'),
+		js_pipeline(files: 'assets/js/*.coffee', out:'/js/main.js'),
+		css_pipeline(files: 'assets/css/*.styl', out:'/css/styles.css'),
 		ClientTemplates(
 			base: "views/templates/", # required
 			pattern: "**/*.jade", # defaults to **
-			out: "js/templates.js" # defaults to js/templates.js
+			out: "/js/templates.js" # defaults to js/templates.js
 		),
 		contentful(
 			access_token: 'fcecf66c49f21c557e882bddff5b548bd385db19ea1caa2aedb3d4cab3aa68a6',

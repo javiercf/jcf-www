@@ -26,3 +26,5 @@ html
 
     != js()
     != client_templates()
+    script(type="text/javascript").
+      window.templateData = {'contentful':!{JSON.stringify(contentful)}};
