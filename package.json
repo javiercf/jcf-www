@@ -12,6 +12,7 @@
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",
     "node-sass": "^3.4.1",
+    "roots": "^3.1.0",
     "roots-contentful": "0.0.8",
     "rupture": "0.6.x",
     "stylus": "0.52.x"
