@@ -1,3 +1,6 @@
 div.container
   section
-    h2 Work
+    - for post in contentful.projects
+      article
+        h2= post.title
+        a(href=post._url) link

@@ -29,8 +29,8 @@ module.exports =
 				projects:
 					id:'1HtjYWahv6QGyS4KoWm0S2',
 					name:'Project',
-					template: 'views/templates/projects/single.jade',
-					path: (e) -> "#{slug(e.title, {lowercase:true})}"
+					template: 'views/single-project.jade',
+					path: (e) -> "work/#{slug(e.title, {lowercase:true})}"
 			)
 
 	]
