@@ -5,9 +5,14 @@ js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
 ClientTemplates = require 'client-templates'
 contentful = require 'roots-contentful'
+marked = require 'marked'
+slug = require 'slug'
 
 module.exports =
 	ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
+
+	locals:
+		markdown: marked
 
 	extensions: [
 		js_pipeline(files: 'assets/js/*.coffee'),
@@ -23,7 +28,9 @@ module.exports =
 			content_types:
 				projects:
 					id:'1HtjYWahv6QGyS4KoWm0S2',
-					name:'Project'
+					name:'Project',
+					template: 'views/templates/projects/single.jade',
+					path: (e) -> "#{slug(e.title, {lowercase:true})}"
 			)
 
 	]

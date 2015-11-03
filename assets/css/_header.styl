@@ -1,13 +1,26 @@
 header
 	background: #333
 	color: #fff
-	padding: .5em
 	border-bottom 1px solid $aqua
 
 #mainNav
+	&:after
+		content ''
+		display table
+		clear both
 	a
 		color $white
 		text-decoration none
+		float right
+		display block
+		padding .5em
+		transition background .5s ease-in
+		
+		&.brand
+			float left
 		
 		*
 			color inherit
+			
+		&:hover
+			background #000
