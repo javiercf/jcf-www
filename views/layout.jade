@@ -1,0 +1,27 @@
+doctype html
+html
+
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='Easy to use, scalable websites')
+    meta(name='author', content= "Javier Cubides Ferrans")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Alegreya+Sans:100,400")
+    title= "JCF Creative Design"
+    != css()
+
+  body
+    header#header
+        nav#mainNav.container
+            a.brand(href="/") JCF Creative Design
+            a(href="/work")
+                i.icon.icon-briefcase
+    
+    main#main
+        block content
+
+    footer#footer
+        
+
+    != js()
